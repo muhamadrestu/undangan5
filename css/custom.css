@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat&family=Raleway&family=Roboto+Slab&family=Square+Peg&display=swap");
+
+section {
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  background-position: center bottom;
+}
+
+.text1 {
+  padding: 40px;
+}
+
+.txt1 {
+  text-align: center;
+  color: white;
+  padding: 20px 0px 0px 0px;
+  font-family: "Raleway", sans-serif;
+  margin: 0px 0px -10px 0px;
+}
+
+.txt2 {
+  text-align: center;
+  color: white;
+  font-family: "Square Peg", cursive;
+  font-size: 60px;
+  margin: 0px 0px 10px 0px;
+}
+
+.txt3 {
+  text-align: center;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.txt4 {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+.txt5 {
+  text-align: center;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.button {
+  padding: 0px 0px 0px 0px;
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    min-height: 30vh;
+  }
+  h1 {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+}

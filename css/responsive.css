@@ -1,0 +1,32 @@
+@media all and (max-width: 1000px) {
+  .masthead {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-position: center bottom;
+  }
+}
+
+/* Untuk Smartphone */
+@media all and (max-width: 670px) {
+  .masthead {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-position: center bottom;
+  }
+
+  .txt1 {
+    white-space: nowrap;
+    font-size: 20px;
+    padding-top: 100px;
+  }
+
+  .txt2 {
+    white-space: nowrap;
+    font-size: 60px;
+    padding-top: 20px;
+  }
+}

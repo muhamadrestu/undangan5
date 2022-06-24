@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Undangan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+	<!--Popup CSS-->
+	<link rel="stylesheet" href="css/popup.css">
+
+	<!--Creator Vector Popup Source-->
+	<a href="https://www.flaticon.com/free-icons/no-handshake" title="no handshake icons" style="display: none;">No handshake icons created by Freepik - Flaticon</a>
+	<a href="https://www.flaticon.com/free-icons/wear-mask" title="wear mask icons" style="display: none;">Wear mask icons created by Payungkead - Flaticon</a>
+	<a href="https://www.flaticon.com/free-icons/washing-hands" title="washing hands icons" style="display: none;">Washing hands icons created by Freepik - Flaticon</a>
+	<a href="https://www.flaticon.com/free-icons/social-distancing" title="social distancing icons" style="display: none;">Social distancing icons created by Freepik - Flaticon</a>
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<!--Animasi-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body onload="loadComments()">
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		
+
+	<header id="fh5co-couple" class="fh5co-cover" role="banner" style="background-image:url(img/bg01.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h2>Wedding Invitation</h2>
+							<h1>Sofyan &amp; Yayu</h1>
+							<h2>We Are Getting Married</h2>
+							<div class="simply-countdown simply-countdown-one"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="modl" id="myNav">
+			<section class="masthead" style="background-image: url(img/BG1.jpg);">
+				<div class="text1 d-flex flex-column justify-content-center align-items-center animate__animated animate__fadeInDown">
+					<h4 class="txt1">THE WEDDING OF</h4>
+					<h1 class="txt2">Sofyan & Yayu</h1>
+					<h5 class="txt3">Kepada Bapak/Ibu/Saudara/i</h5>
+					<h4 class="txt4" id="untuk">Name here</h4>
+					<h6 class="txt5">Mohon maaf bila ada kesalahan penulisan nama/gelar</h6>
+				</div>
+				<div class="button2 text-center animate__animated animate__fadeInUp" id="tes1">
+					<a button class="btn btn-outline-light rounded-pill" onclick="closeNav(); showPop(); togglePlay('play')">Buka Undangan</a>
+				</div>
+			</section>
+	</div>
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close material-symbols-outlined">
+				close
+				</span>
+		  <div class="popup">
+			<div class="judul" style="font-size: 400px;">
+				<h2 style="text-align: center;">Protokol Covid-19</h2>
+			</div>
+			<div style="max-width: 500px; margin: auto">
+				<br />
+				<p style="text-align: center;">Dalam upaya mengurangi penyebaran Covid 19 pada masa pandemi, kami harapkan kedatangan para tamu undangan agar menjalankan protokol yang berlaku.</p>
+				<table style="font-size: 0.9rem; margin: auto; float: center;">
+				  <tbody>
+					<tr>
+					  <td width="50%">
+						<img src="img/man.png" alt="masker" style="max-width:80px">
+						<br />
+						<p>Menggunakan Masker</p>
+					  </td>
+					  <td width="50%">
+						<img src="img/social-distancing.png" alt="distance" style="max-width:80px"> <br />
+						<p>Menjaga Jarak di Acara</p>
+					  </td>
+					</tr>
+					<tr>
+					  <td width="50%">
+						<img src="img/no-handshake.png" alt="salam" style="max-width:80px">
+						<br />
+						<p>Tidak Berjabat Tangan</p>
+					  </td>
+					  <td width="50%">
+						<img src="img/washing-hands.png"  alt="wash" style="max-width:80px"> <br />
+						<p class="tangan">Mencuci Tangan dengan Air atau Handsanitizer</p>
+					  </td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div>
+
+		  </div>
+		</div>
+	  
+	</div>
+
+	<div id="fh5co-couple" class="fh5co-bg" style="background-image:url(img/bf.png);">
+		<div id="fh5co-couple">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<h2 id="home">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h2>
+						<h3>“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.” (QS. Ar-Rum 21)</h3>
+						<p></p>
+					</div>
+				</div>
+				<div class="couple-wrap animate-box">
+					<div class="couple-half">
+						<div class="groom">
+							<img src="img/1651420667634-modified.png" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-groom">
+							<h3>Yayu Astri Harjuningsih S.Ikom</h3>
+							<p>Putri Ketiga dari pasangan <br> H. Ali Marjun AM.SH <br>&<br> Hj. Zohrah Spd.SD</p>
+						</div>
+					</div>
+					<p class="heart text-center"><i class="icon-heart2"></i></p>
+					<div class="couple-half">
+						<div class="bride">
+							<img src="img/1651420667634-modified-2.png" alt="groom" class="img-responsive">
+						</div>
+						<div class="desc-bride">
+							<h3>Ahmad Sofyan S.E</h3>
+							<p>Putra Kedua dari pasangan<br> Amirudin<br>&<br>Dewi Laxmi</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+
+	<div id="fh5co-event" class="acara fh5co-bg" style="background-image:url(img/Layer\ 1.png);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2 id="acara">Acara</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Resepsi 1</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>11.00 - 12.00</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>02 Juli 2022</span>
+									</div>
+									<p>📍Gedung Aula Guru Kopang Lombok Tengah</p>
+									<a class="btn btn-primary" href="https://goo.gl/maps/wA4kT1E9eoTPGLHX6" role="button">Lihat Peta</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Resepsi 2</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>12:00 - 13.00 PM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>02 Juli 2022</span>
+									</div>
+									<p>📍Gedung Aula Guru Kopang Lombok Tengah</p>
+									<a class="btn btn-primary" href="https://goo.gl/maps/wA4kT1E9eoTPGLHX6" role="button">Lihat Peta</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-couple-story" class="fh5co-bg" style="background-image:url(img/Bg5.jpg);">
+		<div id="fh5co-couple-story">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading1 animate-box">
+						<h2 id="akad">Akad Nikah</h2>
+						<p class="akadtext">Akad nikah akan diselenggarakan pada hari yang sama di pagi hari di kediaman mempelai wanita. Apabila berkenan mengikuti proses akad nikah, maka kami menyediakan Live Streaming Instagram pada akun dibawah ini.</p>
+						<a href="https://www.instagram.com/yayuahn/" target="_blank" style="color: white"  class="instagramy"><u>@yayuahn</u></a>
+						<a href="https://www.instagram.com/sofyanibrahim/" target="_blank" style="color: white" class="instagrams"><u>@sofyanibrahim</u></a>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2 id="gallery">Our Gallery</h2>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">	
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our1.jpg); "> </li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our2.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our3.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our4.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our5.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our7.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our6.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our8.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our9.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our18.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our12.jpg); "> </li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/11left.jpg) "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our10leftjpg.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our13.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our14.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our15.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our16.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(img/our17.jpg); "></li>
+					</ul>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2 id="gallery">Ucapan</h2>
+				</div>
+				<div class="container animate-box">
+					<form id="comments">
+					  <div class="mb-3">
+						<label for="name" class="form-label">Nama</label>
+						<input id="name" name="name" type="text" class="form-control" />
+					  </div>
+					  <div class="mb-3">
+						<label for="comment" class="form-label">Masukkan Ucapan</label>
+						<textarea id="comment" name="comment" class="form-control"></textarea>
+					  </div>
+					  <div class="h text-center">
+						<button class="btn btn-primary btn1" role="button">Kirim</button>
+					  </div>
+					</form>
+				  </div>
+				<div class="container cont animate-box"></div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+
+
+	
+
+	<div class="myNav button2 gototop js-top"  onclick="togglePlay('pause')" id="pause">
+		<img src="/img/pause2.png">
+	</div>
+	<div class="myNav button2 gototop js-top"  onclick="togglePlay('play')"  style="display:none" id="play">
+		<img src="/img/play2.png">
+	</div>
+
+	<audio id="mySong">
+		<source  id="mySong" src="Audio/audio.mp3" type="audio/mp3" loop="loop">
+	</audio>
+	
+	<script>
+		const firebaseConfig = {
+		  apiKey: "AIzaSyCpPR63h01uIUpbm8vbWZJJ9vVaWceJwb0",
+		  authDomain: "commen2.firebaseapp.com",
+		  projectId: "commen2",
+		  storageBucket: "commen2.appspot.com",
+		  messagingSenderId: "340301980002",
+		  appId: "1:340301980002:web:89d146b3bb5a7fecc1cc3b",
+		};
+		firebase.initializeApp(firebaseConfig);
+		const db = firebase.firestore();
+	</script>
+	
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+	<!--popup-->
+	<script src="js/popup.js"></script>
+
+	<script src="./js/overlay.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<!--Song-->
+	<script src="js/index.js"></script>
+
+	<!--Song-->
+	<script src="js/url.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!--Firebase-->
+
+	<script src="js/read.js"></script>
+
+	<script>
+    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: 2022,
+        month: 7,
+        day: 2
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: 2022,
+        month: 7,
+        day: 2,
+        enableUtc: false
+    });
+	</script>
+
+	
+
+	</body>
+</html>
+
